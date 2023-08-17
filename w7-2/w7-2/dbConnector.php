@@ -1,10 +1,10 @@
 <?php
 
 // Create constants
-DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PSWD', 'Nu200240853');
-DEFINE ('DB_SERVER', 'localhost');
-DEFINE ('DB_NAME', 'final');
+DEFINE ('DB_USER', '');
+DEFINE ('DB_PSWD', '');
+DEFINE ('DB_SERVER', '');
+DEFINE ('DB_NAME', '');
 
 // ///////////////////////////////////////////////////
 // Get db connection
@@ -18,16 +18,8 @@ function ConnGet() {
 }
 // ///////////////////////////////////////////////////
 // Get Select records based on the Parent Id
-function MyPagesGet($dbConn, $Parent=0) {
-    $query = "SELECT id, Title, Header1, Text1 FROM MyWebDocs where isActive = 1 and ParentPage = " . $Parent . " order by ParentPage asc, SortOrder Asc;";
-    // SELECT id, Title, Header1, Text1 FROM MyWebDocs where isActive = 1 and ParentPage = " . $Parent . " order by ParentPage asc, SortOrder Asc;
-
-    return @mysqli_query($dbConn, $query);
-}
-// ///////////////////////////////////////////////////
-// Get all the page records
-function MyPagesAllGet($dbConn) {
-    $query = "SELECT id, Title, Header1, Text1, ParentPage, SortOrder, isActive FROM MyWebDocs order by ParentPage asc, SortOrder Asc;";
+function MyMenuGet($dbConn) {
+    $query = "SELECT id, Title FROM menu where isActive = 1;";
 
     return @mysqli_query($dbConn, $query);
 }
@@ -51,33 +43,19 @@ return $return;
 
 // ///////////////////////////////////////////////////
 // Get all the page records
-function MyPageremove($dbConn, $Id) {
-
+function MyPageRemove($dbConn, $Id) {
     // Never delete a page. set it to incative
-    $query = "Update FROM MyWebDocs set isActive = 0 where id = " . $Id;
+    $query = "Update FROM menu set isActive = 0 where id = " . $Id;
 
     return @mysqli_query($dbConn, $query);
 }
 
 function Search($dbConn, $searchTerm)
 {
-    $query = "SELECT * FROM Movies WHERE Title like '%" . $searchTerm . "%' OR MovieDescription like '%" . $searchTerm . "%'  AND isActive = 1";
+    $query = "SELECT * FROM productss WHERE ProductName like '%" . $searchTerm . "%' OR ProductDescription like '%" . $searchTerm . "%'  AND isActive = 1";
     return @mysqli_query($dbConn, $query);
 }
 
-function GetGenre($dbConn, $genre)
-{
-    $query = "SELECT * FROM movies WHERE genre = '" . $genre . "' AND isActive = 1";
-    return @mysqli_query($dbConn, $query);
-}
-
-function GetList($dbConn, $listId)
-{
-    $query = "SELECT * FROM movies WHERE listId= '" . $listId . "' AND isActive = 1";
-
-    $query = "SELECT * FROM movies WHERE listId= '" . $listId . "' AND isActive = 1";
-    return @mysqli_query($dbConn, $query);
-}
 
 ?>
 
