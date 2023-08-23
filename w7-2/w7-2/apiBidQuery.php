@@ -8,7 +8,7 @@ header('Content-Type: application/json');
 $myJSON = "";
 $row = null;
 $myGet = "";
-
+$amount = "";
 // Process if there is a parameter (id)
 if (array_key_exists("genre", $_GET) == TRUE) {
     // Get the db connection
