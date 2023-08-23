@@ -1,2 +1,3 @@
-<hr />
-<h4>This is the Footer</h4>
+<?php
+Copyright &copy; 2023 IBay Inc.
+?>
