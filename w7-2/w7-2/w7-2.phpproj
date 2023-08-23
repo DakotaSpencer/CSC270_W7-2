@@ -1,6 +1,11 @@
 <Project Sdk="Devsense.Php.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>3b461f06-e72e-4675-9d14-e76bf6c542be</ProjectGuid>
+  </PropertyGroup>
   <PropertyGroup>
     <EnvName>PHPDev</EnvName>
     <RuntimeVersion>8.2</RuntimeVersion>
+    <SpecificPageValue>data/insertJsonIntoMySQL.py</SpecificPageValue>
+    <StartAction>SpecificPage</StartAction>
   </PropertyGroup>
 </Project>
