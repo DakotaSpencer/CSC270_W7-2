@@ -1,5 +1,5 @@
 <?php
-include_once "MyHeader.php";
+include_once "Header.php";
 ?>
 
 <?php
