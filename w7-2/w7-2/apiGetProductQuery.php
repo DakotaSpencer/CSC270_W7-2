@@ -23,15 +23,8 @@ if (array_key_exists("productId", $_GET) == TRUE) {
 
         if ($row = mysqli_fetch_array($dataSet)) {
             $lastElement = end($row);
-
             foreach ($row as $k => $v) {
-                $myJSON = "[";
-                $myJSON .= '{"title":"' . $row['Title'] . '","price":"' . $row['Price'] . '","description":"' . $row['Description'] . '","category":"' . $row['Category'] . '","image":"' . $row['Image'] . '","rating":"' . $row['Rating'] . '","rateCount":"' . $row['rateCount'] . '"}';
-                if ($v == $lastElement) {
-                    $myJSON .= "]";
-                } else {
-                    $myJSON .= ",";
-                }
+                $myJSON = '[{"title":"' . $row['title'] . '","price":"' . $row['price'] . '","description":"' . $row['description'] . '","category":"' . $row['category'] . '","image":"' . $row['Image'] . '","rating":"' . $row['rating'] . '","rateCount":"' . $row['rateCount'] . '"}]';
             }
         }
 

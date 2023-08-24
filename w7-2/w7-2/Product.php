@@ -16,8 +16,8 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
    var request = new XMLHttpRequest();
 
       window.onload = function() {
-  getParams();
-};
+          getParams();
+        };
     // ---------------------------------
     // Click event
     function getParams() {
@@ -41,6 +41,7 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
         var myReturn = "<div>";
 
         myResponse = request.responseText;
+        console.log(request);
         //alert("A: " + myResponse); // Use for debugging
         //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
         myData = JSON.parse(myResponse);
@@ -49,17 +50,14 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
         console.log("My Data:", myData);
 
         // Loop through each json record and create the HTML
-        for (index in myData) {
-            console.log(myData);
-            myReturn += "<div class='imgContainer'><div class='img'><img src='" + myData[index].image + "' /></div></div><div class='productContainer'><div class='productRating'>" +
-                myData[index].rating + " stars</div><div class='productRating'>" +
-                myData[index].rateCount + " Ratings</div><div class='productTitle'>" +
-                myData[index].title + "</div><div class='productCategory'>" +
-                myData[index].category + "</div><div class='productDescription'>" +
-                myData[index].description + "</div><div class='productPrice'>$" +
-                myData[index].price + "</div><div class='buttonOptions'><button class='toCart'>Add to Cart</button><button class='toList'>Add to Lists</button></div>";
+            myReturn += '<div class="imgContainer"><div class="img"><img src="' + myData[0].image.toString() + '.opdownload" /></div></div><div class="productContainer"><div class="productRating">' +
+                myData[0].rating + " stars</div><div class='productRating'>" +
+                myData[0].rateCount + " Ratings</div><div class='productTitle'>" +
+                myData[0].title + "</div><div class='productCategory'> Category: " +
+                myData[0].category + "</div><div class='productDescription'> Description: " +
+                myData[0].description + "</div><div class='productPrice'>$" +
+                myData[0].price + "</div><div class='buttonOptions'><button class='toCart'>Add to Cart</button><button class='toList'>Add to Lists</button></div>";
 
-        }
         myReturn += "</div>";
         document.getElementById("jsonData").innerHTML = myReturn; // Display table
     }

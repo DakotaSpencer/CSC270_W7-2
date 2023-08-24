@@ -64,8 +64,3 @@ function GetProduct($dbConn, $productId)
 
 
 ?>
-
-?>
-
-
-
