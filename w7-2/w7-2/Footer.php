@@ -1,3 +1,6 @@
+</body>
+</html>
+
 <?php
-Copyright &copy; 2023 IBay Inc.
+echo "Copyright &copy; 2023 IBay Inc."
 ?>
