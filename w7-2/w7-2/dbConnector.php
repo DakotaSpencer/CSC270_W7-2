@@ -2,9 +2,9 @@
 
 // Create constants
 DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PSWD', 'P@ssw0rd');
+DEFINE ('DB_PSWD', 'pass');
 DEFINE ('DB_SERVER', 'localhost');
-DEFINE ('DB_NAME', 'final');
+DEFINE ('DB_NAME', 'mytestdb');
 
 // ///////////////////////////////////////////////////
 // Get db connection
@@ -25,7 +25,7 @@ function MyMenuGet($dbConn) {
 }
 // ///////////////////////////////////////////////////
 // Get Select page
-function PageContentGet($dbConn, $Id) {
+/*function PageContentGet($dbConn, $Id) {
     $return = null;
 
     $query = "SELECT id, Title, Header1, Text1 FROM MyWebDocs where isActive = 1 and id = " . $Id;
@@ -40,6 +40,7 @@ function PageContentGet($dbConn, $Id) {
 
 return $return;
 }
+*/
 
 // ///////////////////////////////////////////////////
 // Get all the page records
