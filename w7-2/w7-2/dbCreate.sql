@@ -43,3 +43,8 @@
 ---SortOrder varchar (255),
 ----isActive int
 --);
+
+-- create table if not exists cart (
+-- userId varchar(255),
+-- productId int
+-- );
