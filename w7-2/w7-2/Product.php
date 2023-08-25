@@ -51,7 +51,7 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
 
         // Loop through each json record and create the HTML
             myReturn += '<div class="imgContainer"><div class="img"><img src="' + myData[0].image.toString() + '.opdownload" /></div></div><div class="productContainer"><div class="productRating">' +
-                myData[0].rating + " stars</div><div class='productRating'>" +
+                myData[0].rating + " stars | " +
                 myData[0].rateCount + " Ratings</div><div class='productTitle'>" +
                 myData[0].title + "</div><div class='productCategory'> Category: " +
                 myData[0].category + "</div><div class='productDescription'> Description: " +
