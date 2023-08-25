@@ -24,7 +24,7 @@ if (array_key_exists("productId", $_GET) == TRUE) {
         if ($row = mysqli_fetch_array($dataSet)) {
             $lastElement = end($row);
             foreach ($row as $k => $v) {
-                $myJSON = '[{"title":"' . $row['title'] . '","price":"' . $row['price'] . '","description":"' . $row['description'] . '","category":"' . $row['category'] . '","image":"' . $row['Image'] . '","rating":"' . $row['rating'] . '","rateCount":"' . $row['rateCount'] . '"}]';
+                $myJSON = '[{"title":"' . $row['title'] . '","price":"' . $row['price'] . '","description":"' . $row['description'] . '","category":"' . $row['category'] . '","image":"' . $row['image'] . '","rating":"' . $row['rating'] . '","rateCount":"' . $row['rateCount'] . '"}]';
             }
         }
 

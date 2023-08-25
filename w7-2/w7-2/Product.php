@@ -48,9 +48,9 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
 
         // alert(myData);
         console.log("My Data:", myData);
-
+        console.log(myData[0])
         // Loop through each json record and create the HTML
-            myReturn += '<div class="imgContainer"><div class="img"><img src="' + myData[0].image.toString() + '.opdownload" /></div></div><div class="productContainer"><div class="productRating">' +
+            myReturn += '<div class="imgContainer"><div class="img"><img src="' + myData[0].image.toString() + '" /></div></div><div class="productContainer"><div class="productRating">' +
                 myData[0].rating + " stars | " +
                 myData[0].rateCount + " Ratings</div><div class='productTitle'>" +
                 myData[0].title + "</div><div class='productCategory'> Category: " +
