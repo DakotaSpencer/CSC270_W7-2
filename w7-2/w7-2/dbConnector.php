@@ -62,5 +62,11 @@ function GetProduct($dbConn, $productId)
     return @mysqli_query($dbConn, $query);
 }
 
+function GetCartItems($dbConn, $userId)
+{
+    $query = "SELECT * FROM cart WHERE userId = " . $userId . ";";
+    return @mysqli_query($dbConn, $query);
+}
+
 
 ?>
