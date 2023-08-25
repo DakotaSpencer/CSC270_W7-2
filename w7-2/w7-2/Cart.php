@@ -1,9 +1,7 @@
 <?php
 use CommonMark\Node\Image;
 include_once "Header.php";
-include_once "Menu.php";
 ?>
-
 <!--<p>&#x1F6D2;</p>-->
 <div>
     <h2>Cart</h2>
