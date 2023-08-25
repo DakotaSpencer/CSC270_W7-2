@@ -1,10 +1,10 @@
 <?php
 
 // Create constants
-DEFINE ('DB_USER', '');
-DEFINE ('DB_PSWD', '');
-DEFINE ('DB_SERVER', '');
-DEFINE ('DB_NAME', '');
+DEFINE ('DB_USER', 'root');
+DEFINE ('DB_PSWD', 'Riley2802*');
+DEFINE ('DB_SERVER', 'localhost');
+DEFINE ('DB_NAME', 'sliceofpi2');
 
 // ///////////////////////////////////////////////////
 // Get db connection
@@ -56,8 +56,6 @@ function Search($dbConn, $searchTerm)
     return @mysqli_query($dbConn, $query);
 }
 
-
-?>
 
 ?>
 
