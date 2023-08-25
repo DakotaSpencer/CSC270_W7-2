@@ -79,7 +79,8 @@ Search for a movie!
     }
     // ---------------------------------
             // Call the microservice and get the data
-    function loadJson(val) {
+    function 
+    (val) {
         // alert("id: " + id); // Use for debugging
         request.open('GET', 'search.php?searchTerm=' + val);
         request.onload=loadComplete;
