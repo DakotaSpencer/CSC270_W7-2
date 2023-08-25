@@ -56,7 +56,7 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
                 myData[0].title + "</div><div class='productCategory'> Category: " +
                 myData[0].category + "</div><div class='productDescription'> Description: " +
                 myData[0].description + "</div><div class='productPrice'>$" +
-                myData[0].price + "</div><div class='buttonOptions'><button class='toCart'>Add to Cart</button><button class='toList'>Add to Lists</button></div>";
+                myData[0].price + "</div>";
 
         myReturn += "</div>";
         document.getElementById("jsonData").innerHTML = myReturn; // Display table
@@ -68,3 +68,7 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
 <?php
 include_once "MyFooter.php";
 ?>
+
+<div class='buttonOptions'>
+    <button class='toCart'>Add to Cart</button><button class='toList'>Add to Lists</button>
+</div>
