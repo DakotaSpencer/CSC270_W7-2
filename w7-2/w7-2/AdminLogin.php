@@ -39,8 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-?>
-
 <h3>Admin Login</h3>
 
 <form method="post" action="">

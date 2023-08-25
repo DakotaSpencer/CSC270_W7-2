@@ -29,7 +29,8 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
             // Call the microservice and get the data
     function loadJson(id) {
         // alert("id: " + id); // Use for debugging
-        request.open('GET', 'apiGetProductQuery.php?productId=' + id);
+        request.open('GET', 'api
+        Query.php?productId=' + id);
         request.onload=loadComplete;
         request.send();
     }

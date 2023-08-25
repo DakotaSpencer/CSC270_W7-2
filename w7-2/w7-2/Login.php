@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc(); // grab user data and store in array
         //Check if password matches
-        if ($user["IsActive"] == 1 && $password === $user["Pswd"]) { 
+        if ($user["isActive"] == 1 && $password === $user["Pswd"]) { 
             //Set Session ID
             $_SESSION["user_id"] = $user["id"];
             $_SESSION["username"] = $user["UserId"]; // Give the user a session name
