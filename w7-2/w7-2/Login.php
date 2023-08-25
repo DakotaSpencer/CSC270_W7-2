@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once "MyHeader.php";
+require "dbConnector.php";
 
 //form post
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -11,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $connection = ConnGet(); //db conn
 
     // pull user based on inputted username for verification
-    $sql = "SELECT * FROM MyUsers WHERE UserId = '$username'";
+    $sql = "SELECT * FROM Users WHERE UserId = '$username'";
     $result = mysqli_query($connection, $sql); //execute the query and put it in $result
 
     //If the result returns that specific row, Form data matched with db and login was successful
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION["username"] = $user["UserId"]; // Give the user a session name
             $_SESSION["is_admin"] = 0; // Regular users have 
 
-            header("Location: index.php"); // Bring User to Home Page with session
+            header("Location: Menu.php"); // Bring User to Home Page with session
             exit();
             //Error Handeling
         } else {
