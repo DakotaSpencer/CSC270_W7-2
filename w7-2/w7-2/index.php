@@ -25,10 +25,10 @@ if (array_key_exists("PageId", $_GET) == true) {
 
 // Get given page
 $myDbConn =  ConnGet();
-$PageData = PageContentGet($myDbConn, $PageId);
+//$PageData = PageContentGet($myDbConn, $PageId);
 // Display page data
-PageDisplay($PageData);
-mysqli_free_result($PageData);
+//PageDisplay($PageData);
+//mysqli_free_result($PageData);
 
 // Display sub page links
 

@@ -12,7 +12,7 @@
         <div>
             <button class="navBar">
                 <div>
-                    <a href="Product.php">
+                    <a href="Product.php?productId=1">
                         Product
                     </a>
                 </div>
