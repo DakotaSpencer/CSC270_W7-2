@@ -1,11 +1,13 @@
 ﻿--use  MyTestDb;
 
 ---- drop table movies;
+---- drop table users;
 --create table if not exists users(
 -- id int not null AUTO_INCREMENT PRIMARY KEY,
 -- First_Name varchar(25) Not null,
 -- Last_Name varchar(25) Not null,
 -- UserId varchar(25),
+-- Username varchar(25),
 -- Pswd varchar(25),
 -- isAdmin int,
 -- isActive int
@@ -32,4 +34,12 @@
 --ProductId int,
 --UserId int,
 --Amount int
+--);
+
+--create table if not exists categories (
+--categoryId int,
+--Title varchar (255),
+---Header varchar (255),
+---SortOrder varchar (255),
+----isActive int
 --);

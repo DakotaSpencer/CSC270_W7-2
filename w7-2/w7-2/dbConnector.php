@@ -2,9 +2,9 @@
 
 // Create constants
 DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PSWD', 'Riley2802*');
+DEFINE ('DB_PSWD', 'P@ssw0rd');
 DEFINE ('DB_SERVER', 'localhost');
-DEFINE ('DB_NAME', 'sliceofpi2');
+DEFINE ('DB_NAME', 'final');
 
 // ///////////////////////////////////////////////////
 // Get db connection
@@ -52,12 +52,15 @@ function MyPageRemove($dbConn, $Id) {
 
 function Search($dbConn, $searchTerm)
 {
-    $query = "SELECT * FROM productss WHERE ProductName like '%" . $searchTerm . "%' OR ProductDescription like '%" . $searchTerm . "%'  AND isActive = 1";
+    $query = "SELECT * FROM products WHERE ProductName like '%" . $searchTerm . "%' OR ProductDescription like '%" . $searchTerm . "%'  AND isActive = 1";
+    return @mysqli_query($dbConn, $query);
+}
+
+function GetProduct($dbConn, $productId)
+{
+    $query = "SELECT * FROM products WHERE id = " . $productId . ";";
     return @mysqli_query($dbConn, $query);
 }
 
 
 ?>
-
-
-

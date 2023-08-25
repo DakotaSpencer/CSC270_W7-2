@@ -1,2 +1,6 @@
-<hr />
-<h4>This is the Footer</h4>
+</body>
+</html>
+
+<?php
+echo "Copyright &copy; 2023 IBay Inc."
+?>
