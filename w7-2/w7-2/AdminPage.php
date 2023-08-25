@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once "MyHeader.php";
+//include_once "Header.php";
 require "dbConnector.php";
 
 // Check if the user is logged in and is an admin

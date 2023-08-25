@@ -29,9 +29,8 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
             // Call the microservice and get the data
     function loadJson(id) {
         // alert("id: " + id); // Use for debugging
-        request.open('GET', 'api
-        Query.php?productId=' + id);
-        request.onload=loadComplete;
+        request.open('GET', 'apiQuery.php?productId=' + id);
+        request.onload=loadComplete();
         request.send();
     }
 
@@ -69,7 +68,6 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
 <?php
 include_once "MyFooter.php";
 ?>
-
 <div class='buttonOptions'>
     <button class='toCart'>Add to Cart</button><button class='toList'>Add to Lists</button>
 </div>
