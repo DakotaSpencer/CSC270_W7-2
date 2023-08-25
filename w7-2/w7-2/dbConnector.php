@@ -69,5 +69,15 @@ function GetCartItems($dbConn, $userId)
     return @mysqli_query($dbConn, $query);
 }
 
+function GetProductFromCart($dbConn, $productId)
+{
+    $query = "SELECT JSON_OBJECT(
+                'id', cart.id,
+                'image', cart.image,
+                'title', cart.title,
+                'price', cart.price) as Json1
+                FROM cart WHERE id = $productId;";
+    return @mysqli_query($dbConn, $query);
+}
 
 ?>
