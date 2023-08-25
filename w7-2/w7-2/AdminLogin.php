@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION["username"] = $user["UserId"]; // Give the admin a session name
             $_SESSION["is_admin"] = 1; // set as admin
 
-            header("Location: menu.php"); // Bring User to Home Page with session
+            header("Location: AdminPage.php"); // Bring User to Home Page with session
             exit();
             //Error Handeling
         } else {
