@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $connection = ConnGet();
 
     // Insert from data into the user table in the db
-    $sql = "INSERT INTO MyUsers (First_Name, Last_Name, UserId, Pswd, isAdmin, isActive)
+    $sql = "INSERT INTO Users (First_Name, Last_Name, UserId, Pswd, isAdmin, isActive)
             VALUES ('$fName', '$lName', '$username', '$password', 0, 1)";
     //Check if the query worked successfully 
     if (mysqli_query($connection, $sql) === TRUE) {

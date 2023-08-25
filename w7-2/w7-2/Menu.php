@@ -26,5 +26,22 @@
     </tr> 
 </table>
 <?php
+session_start();
+ if (isset($_SESSION["admin_id"]) && $_SESSION["is_admin"] === 1) {
+        $username = $_SESSION["username"];
+        echo "<br /> Welcome, $username (admin)! ";
+    }
+    // Check if the user is logged in
+    else if (isset($_SESSION["user_id"])) {
+        $username = $_SESSION["username"];
+    echo "<br /> Welcome, $username ! ";
+}
+    // Echo if not logged in
+    else {
+        echo "<br /> Welcome, please log in ";
+    }
+
+?>
+<?php
 echo "This is Menu end";
 ?>
