@@ -22,7 +22,7 @@ if (array_key_exists("searchTerm", $_GET) == TRUE) {
     if ($dataSet) {
         // $myJSON = "[";
         if ($row = mysqli_fetch_array($dataSet)) {
-            $myJSON = '[{"Title":"' . $row['Title'] . '","Description":"' . $row['MovieDescription'] . '","Genre":"' . $row['Genre'] . '","Rating":"' . $row['Rating'] . '","Year":"' . $row['ReleaseYear'] . '"}]';
+            $myJSON = '[{"Category":"' . $row['Category'] . '","Title":"' . $row['Title'] . '","Description":"' . $row['Description'] . '","Price":"' . $row['Price'] . '","Rating":"' . $row['Rating'] . '","Rate Count":"' . $row['RateCount'] . '"}]';
         }
     }
     mysqli_close($myDbConn);

@@ -1,7 +1,16 @@
-﻿--use  MyTestDb;
+﻿--create database if not exists final;
+--use final;
+--create table if not exists products(
+-- id int not null AUTO_INCREMENT PRIMARY KEY,
+-- title varchar(500) Not null,
+-- price int Not null,
+-- description varchar(2000),
+-- category varchar(500),
+-- image varchar(500),
+-- rating int,
+-- rateCount int
+--);
 
----- drop table movies;
----- drop table users;
 --create table if not exists users(
 -- id int not null AUTO_INCREMENT PRIMARY KEY,
 -- First_Name varchar(25) Not null,
@@ -27,13 +36,6 @@
 -- ProductDescription varchar(1000),
 -- Price int,
 -- isActive int
---);
-
---create table if not exists bids(
---id int not null AUTO_INCREMENT PRIMARY KEY,
---ProductId int,
---UserId int,
---Amount int
 --);
 
 --create table if not exists categories (

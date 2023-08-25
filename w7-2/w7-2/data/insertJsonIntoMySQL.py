@@ -2,15 +2,15 @@ import json
 import mysql.connector
 
 # Load JSON data from the file
-with open("C:/Users/Sabrina/Desktop/Y3/Q4/Solution Stack/W7/W7-2/CSC270_W7-2/w7-2/w7-2/data/womens_clothing.json", encoding='utf8') as json_file:
+with open("C:/the path to your file", encoding='utf8') as json_file:
     json_data = json.load(json_file)
-print("file found")
+print("File found")
 # MySQL database connection details
 host = "127.0.0.1"
-user = "root"
-password = "Nu200240853"
-database = "final"
-table_name = "products"
+user = "user"
+password = "password"
+database = "database_name"
+table_name = "table_name"
 
 # Create a connection to the MySQL database
 connection = mysql.connector.connect(
@@ -25,21 +25,19 @@ cursor = connection.cursor()
 
 # Insert data into the table
 insert_query = f"""
-INSERT INTO {table_name} (title, price, description, category, image, rating, rateCount)
+INSERT INTO {table_name} (Col1, Col2, Col3, Col4, Col5)
 VALUES (%s, %s, %s, %s, %s, %s, %s);
 """
 
 for item in json_data:
-    title = item["title"]
-    price = item["price"]
-    description = item["description"]
-    category = item["category"]
-    image = item["image"]
-    rating = item["rating"]
-    rateCount = item["rateCount"]
+    Col1 = item["Col1"]
+    Col2 = item["Col2"]
+    Col3 = item["Col3"]
+    Col4 = item["Col4"]
+    Col5 = item["Col5"]
 
 
-    data_to_insert = (title, price, description, category, image, rating, rateCount)
+    data_to_insert = (Col1, Col2, Col3, Col4, Col5)
 
     cursor.execute(insert_query, data_to_insert)
 
@@ -48,3 +46,5 @@ connection.commit()
 connection.close()
 
 print("Data from JSON file inserted into the MySQL table successfully.")
+
+# This script can be run in your IDE of choice 

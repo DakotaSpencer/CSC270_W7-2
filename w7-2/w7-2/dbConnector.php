@@ -52,10 +52,15 @@ function MyPageRemove($dbConn, $Id) {
 
 function Search($dbConn, $searchTerm)
 {
-    $query = "SELECT * FROM productss WHERE ProductName like '%" . $searchTerm . "%' OR ProductDescription like '%" . $searchTerm . "%'  AND isActive = 1";
+    $query = "SELECT * FROM products WHERE ProductName like '%" . $searchTerm . "%' OR Description like '%" . $searchTerm . "%'";
     return @mysqli_query($dbConn, $query);
 }
 
+function GetCategory($dbConn, $category)
+{
+    $query = "SELECT * FROM products WHERE category = '" . $category . "'";
+    return @mysqli_query($dbConn, $query);
+}
 
 ?>
 

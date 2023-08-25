@@ -1,3 +1,3 @@
 <?php
-Copyright &copy; 2023 IBay Inc.
+//Copyright &copy; 2023 IBay Inc.
 ?>
