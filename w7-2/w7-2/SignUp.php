@@ -56,9 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <br />
 <br />
-You do not need to "wire-up" a database.
-<br />
-You could have two buttons that change the session value for an admin/user
+
 
 <?php
 include_once "MyHeader.php";

@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-?>
+
 
 <h3>Admin Login</h3>
 
@@ -52,15 +52,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </form>
 
 <p>
-    <a href="Login.php">Not Admin? Click Here</a>
+    <a href="Login.php">Not an Admin? Click Here</a>
 </p>
 
 
-<br />
-<br />
-You do not need to "wire-up" a database. 
-<br />
-You could have two buttons that change the session value for an admin/user
+
 
 <?php
 include_once "MyHeader.php";
