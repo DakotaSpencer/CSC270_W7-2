@@ -1,57 +1,88 @@
 <?php
-require "dbConnector.php";
 include_once "Header.php";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve the form data
-    $id = strval($_GET['productId']);
-
-    // Create the database connection
-    $dbConn = ConmnGet();
-
-    // Call the Read function to fetch the JSON data.
-    $jsonData = GetProductFromCart($dbConn, $id);
-
-    // Check if the data was retrieved successfully.
-    if ($jsonData) {
-        // Fetch the JSON object from the result set.
-        $row = mysqli_fetch_assoc($jsonData);
-
-        // Decode the JSON data into an associative array.
-        $productInfo = json_decode($row['Json1'], true);
-
-        // Check if the JSON was successfully decoded.
-        if ($productInfo) {
-        // Create a table to display all vehicle information
-        echo '
-            <div>
-                <h2>Cart</h2>
-                <table>
-                    <tr>
-                        <th>Image</th>
-                        <th>Item Name</th>
-                        <th>Price</th>
-                        <th>Delete</th>
-                    </tr>
-                    <tr>
-                        <td>' . $productInfo["image"] . '</td>
-                        <td>' . $productInfo["title"] . '</td>
-                        <td>' . $productInfo["price"] . '</td>
-                        <td>&#x2716;</td>
-                    </tr>
-                </table>
-            </div>
-        ';
-
-    } else {
-        echo "<h1>Failed to decode vehicle information. Please try again.</h1>";
-    }
-} else {
-    echo "<h1>Failed to read vehicle. Please try again.</h1>";
-}
-
-// Close the database connection
-mysqli_close($dbConn);
-
-include_once "Footer.php";
 ?>
+
+<?php
+$myVar = "food";
+?>
+<?php
+
+//$id = strval($_GET['productId']);
+//echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
+?>
+<p id="A"></p>
+<p id="jsonData"></p>
+<script>
+        var request = new XMLHttpRequest();
+
+    window.onload = function () {
+        loadJson();
+        };
+
+         function myClickEvent() {
+         // alert("my click"); // Use for debugging
+        // alert("data: " + document.getElementById("title").value); // Use for debugging
+
+        deleteProd(document.getElementById("title").value);
+    }
+
+        function deleteProd(title) {
+        // alert("id: " + id); // Use for debugging
+        request.open('GET', 'delete.php?productTitle=' + title);
+        request.onload=loadComplete;
+        request.send();
+    }
+
+    function loadJson() {
+        // alert("id: " + id); // Use for debugging
+        request.open('GET', 'apiMultGet.php');
+        request.onload=loadComplete;
+        request.send();
+    }
+
+    // Run when the data has been loaded
+    function loadComplete(evt) {
+        var myResponse;
+        var myData;
+        var myReturn = "<div>";
+
+        myResponse = request.responseText;
+        console.log(request);
+        //alert("A: " + myResponse); // Use for debugging
+        //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
+        myData = JSON.parse(myResponse);
+
+        // alert(myData);
+        console.log("My Data:", myData);
+        console.log(myData[0])
+        // Loop through each json record and create the HTML
+            myReturn += '<div class="imgContainer"><div class="img"><img src="' + myData[0].image.toString() + '" /></div></div><div class="productContainer"><div class="productRating">' +
+                myData[0].rating + " stars | " +
+                myData[0].rateCount + " Ratings</div><div class='productTitle'>" +
+                myData[0].title + "</div><div class='productCategory'> Category: " +
+                myData[0].category + "</div><div class='productDescription'> Description: " +
+                myData[0].description + "</div><div class='productPrice'>$" +
+                myData[0].price + "</div>";
+
+        myReturn += "</div>";
+       
+        document.getElementById("jsonData").innerHTML = myReturn; // Display table
+    }
+
+
+   
+</script>
+<div class='buttonOptions'>
+    
+    <br />
+    Want to remove a product? Enter it below
+    <input type="text" id="title" value="" placeholder="Product name" />
+    <button name="a" onclick="myClickEvent()">Submit</button>
+</div>
+
+
+<?php
+include_once "MyFooter.php";
+?>
+
+

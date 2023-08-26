@@ -64,11 +64,11 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
 
 
 </script>
-
+<div class='buttonOptions'>
+    <button class='toCart'>Add to Cart</button><button class='toList'>Add to Lists</button>
+</div>
 <?php
 include_once "MyFooter.php";
 ?>
 
-<div class='buttonOptions'>
-    <button class='toCart'>Add to Cart</button><button class='toList'>Add to Lists</button>
-</div>
+

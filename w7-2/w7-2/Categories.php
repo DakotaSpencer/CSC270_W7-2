@@ -84,12 +84,7 @@ Search for products by category!
     }
 
     
-//     function getCityNameWeather(){
-// var citySearchUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${getCity}&appid=${APIKEY}&units=imperial`;
-// return fetch(citySearchUrl)
-//  .then((res) => res.json())
-//  .catch((err) => console.log(err));
-//} 
+
 </script>
 <div id="demo"></div>
 <div id="demo2"></div>
