@@ -47,22 +47,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <input name="username" type="text" value="" /><br />
     <label>Password:</label><br />
     <input name="password" type="text" value="" /><br />
-    <input type="submit" value="Login" />
+
+    <input type="submit" value="Login" class="navBar"/>
 </form>
-
 <p>
-    <a href="SignUp.php">Not registered? Click Here</a>
+    <button class="navBar">
+        <div>
+            <a href="SignUp.php" class="navButton">Not registered? Click Here</a>
+        </div>
+    </button>
+    
 </p>
 <p>
-    <a href="AdminLogin.php">Are you an Admin? Click Here</a>
+    <button class="navBar">
+        <div>
+            <a href="AdminLogin.php" class="navButton">Are you an Admin? Click Here</a>
+        </div>
+    </button>
 </p>
 
 
 <br />
 <br />
-You do not need to "wire-up" a database. 
 <br />
-You could have two buttons that change the session value for an admin/user
+
 
 <?php
 include_once "MyHeader.php";

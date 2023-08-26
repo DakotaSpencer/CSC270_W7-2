@@ -16,7 +16,9 @@
         height: 40px;
         background-color: #bd9b9b;
         border-radius: 10px;
+        color: #fffcfc;
     }
+
 .navButton {
     color: black;
     text-decoration: none;

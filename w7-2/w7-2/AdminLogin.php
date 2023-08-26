@@ -50,11 +50,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <input name="username" type="text" value="" /><br />
     <label>Password:</label><br />
     <input name="password" type="text" value="" /><br />
-    <input type="submit" />
+    <input  class="navBar" type="submit" />
 </form>
 
 <p>
-    <a href="Login.php">Not Admin? Click Here</a>
+    <button class="navBar">
+        <div>
+            <a href="Login.php" class="navButton">Not Admin? Click Here</a>
+        </div>
+    </button>
+    
 </p>
 
 
