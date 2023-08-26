@@ -2,7 +2,7 @@
 
 // Create constants
 DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PSWD', 'Nu200240853');
+DEFINE ('DB_PSWD', 'P@ssw0rd');
 DEFINE ('DB_SERVER', 'localhost');
 DEFINE ('DB_NAME', 'final');
 
@@ -87,9 +87,9 @@ function GetProductFromCart($dbConn, $productId)
     return @mysqli_query($dbConn, $query);
 }
 
-function DeleteFromCartById($dbConn, $productId)
+function DeleteFromCartByTitle($dbConn, $productTitle)
 {
-    $query = "DELETE * FROM cart WHERE id = " . $productId . ";";
+    $query = "DELETE * FROM cart WHERE productTitle = " . $productTitle . ";";
     return @mysqli_query($dbConn, $query);
 }
 

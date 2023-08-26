@@ -8,10 +8,13 @@ $myVar = "food";
 <?php
 
 $id = strval($_GET['productId']);
-echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
+echo '<p type="text" id="productId" style="visibility:hidden;">' . $id . '</p>';
 ?>
 <p id="A"></p>
 <p id="jsonData"></p>
+<div class='buttonOptions'>
+    <button class='toCart' onclick="myClickEvent()">Add to Cart</button><button class='toList'>Add to Lists</button>
+</div>
 <script>
    var request = new XMLHttpRequest();
 
@@ -30,6 +33,22 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
     function loadJson(id) {
         // alert("id: " + id); // Use for debugging
         request.open('GET', 'apiGetProductQuery.php?productId=' + id);
+        request.onload=loadComplete;
+        request.send();
+    }
+
+    function myClickEvent() {
+         // alert("my click"); // Use for debugging
+        // alert("data: " + document.getElementById("dogId").value); // Use for debugging
+            alert(document.getElementById("productId").innerHTML)
+        addToCart(document.getElementById("productId").value);
+    }
+    // ---------------------------------
+
+    function addToCart(id) {
+        alert("id: " + id); // Use for debugging
+
+        request.open('POST', 'apiAddQuery.php?productId=' + id);
         request.onload=loadComplete;
         request.send();
     }
@@ -61,14 +80,8 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
         myReturn += "</div>";
         document.getElementById("jsonData").innerHTML = myReturn; // Display table
     }
-
-
 </script>
-<div class='buttonOptions'>
-    <button class='toCart'>Add to Cart</button><button class='toList'>Add to Lists</button>
-</div>
+
 <?php
 include_once "MyFooter.php";
 ?>
-
-
