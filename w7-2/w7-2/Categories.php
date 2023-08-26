@@ -39,6 +39,8 @@ Search for products by category!
 <script>
         var request = new XMLHttpRequest();
     function search() {
+        var x = document.getElementById("searchVal").value;
+        document.getElementById("demo").innerHTML = x;
         return fetch('https://fakestoreapi.com/products/category/' + x)
         .then(res=>res.json())
             .then(json => console.log(json))
