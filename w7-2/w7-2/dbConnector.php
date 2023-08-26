@@ -87,4 +87,21 @@ function GetProductFromCart($dbConn, $productId)
     return @mysqli_query($dbConn, $query);
 }
 
+function DeleteFromCartById($dbConn, $productId)
+{
+    $query = "DELETE * FROM cart WHERE id = " . $productId . ";";
+    return @mysqli_query($dbConn, $query);
+}
+
+function DeleteAllFromCart($dbConn)
+{
+    $query = "DELETE * FROM cart;";
+    return @mysqli_query($dbConn, $query);
+}
+
+function AddToCart($dbConn, $productId){
+    $query = "INSERT INTO cart (productId) VALUES (" . $productId . ");";
+    return @mysqli_query($dbConn, $query);
+}
+
 ?>
