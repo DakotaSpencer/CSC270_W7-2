@@ -12,15 +12,23 @@
         <div>
             <button class="navBar">
                 <div>
-                    <a href="Product.php">
-                        Product
+                    <a href="index.php" class="navButton">
+                        Home
                     </a>
+
                 </div>
-                </button></div>
+            </button>
+            </div>
         </td>
         <td>
             <div>
-            <button class="navBar">Nav Button2</button>
+                <button class="navBar">
+                    <div>
+                        <a href="Product.php" class="navButton">
+                            Product
+                        </a>
+                    </div>
+                </button>
             </div>
         </td>
     </tr> 
@@ -41,7 +49,4 @@ session_start();
         echo "<br /> Welcome, please log in ";
     }
 
-?>
-<?php
-echo "This is Menu end";
 ?>

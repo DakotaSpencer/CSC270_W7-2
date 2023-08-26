@@ -29,8 +29,8 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
             // Call the microservice and get the data
     function loadJson(id) {
         // alert("id: " + id); // Use for debugging
-        request.open('GET', 'apiQuery.php?productId=' + id);
-        request.onload=loadComplete();
+        request.open('GET', 'apiGetProductQuery.php?productId=' + id);
+        request.onload=loadComplete;
         request.send();
     }
 
@@ -50,15 +50,15 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
         console.log("My Data:", myData);
         console.log(myData[0])
         // Loop through each json record and create the HTML
-            myReturn += '<div class="imgContainer"><div class="img"><img src="' + myData[0].image.toString() + '" /></div></div><div class="productContainer"><div class="productRating">' +
-                myData[0].rating + " stars | " +
-                myData[0].rateCount + " Ratings</div><div class='productTitle'>" +
-                myData[0].title + "</div><div class='productCategory'> Category: " +
-                myData[0].category + "</div><div class='productDescription'> Description: " +
-                myData[0].description + "</div><div class='productPrice'>$" +
-                myData[0].price + "</div>";
+            myReturn += '<table class="Container"> <tr><td><div><img src="' + myData[0].image.toString() + '" class="imgPic"/></div></td> <td><table class="product"> <tr><td><div>' +
+                myData[0].title + " </div></td></tr> <tr><td><div>" +
+                myData[0].rating + "  Stars |" +
+                myData[0].rateCount + " Ratings</div></td></tr> <tr><td><div>Category: " +
+                myData[0].category + "</div></td></tr> <tr><td><div>Description: " +
+                myData[0].description + "</div></td></tr>  <tr><td><div>$" +
+                myData[0].price + "</div></td></tr> </table> </td>";
 
-        myReturn += "</div>";
+        myReturn += " </tr> </table>";
         document.getElementById("jsonData").innerHTML = myReturn; // Display table
     }
 

@@ -23,7 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-<h2>Admin Hub</h2>
+<link rel="stylesheet" type="text/css" href="/Style.css" />
+
+<img class="logo" src="Logo.png" /><h2>Admin Hub</h2>
 
 <?php
 if (isset($successMessage)) {

@@ -38,8 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $connection->close();
 }
 ?>
+<link rel="stylesheet" type="text/css" href="/Style.css" />
 
-<h3>Login</h3>
+<img class="logo" src="Logo.png" /><h3>Login</h3>
 
 <form method="post" action="">
     <label>Username:</label><br />
