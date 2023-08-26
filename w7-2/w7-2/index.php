@@ -60,7 +60,7 @@ mysqli_free_result($PageData);
 
 Search for a movie!
 <input type="text" id="searchVal" value="" placeholder="Search..."/>
-<button name="a" onclick="myClickEvent()">Submit</button>
+<button class="navBar"name="a" onclick="myClickEvent()">Submit</button>
 <p id="A"></p>
 <p id="jsonData"></p>
 <p id="resultText"></p>
