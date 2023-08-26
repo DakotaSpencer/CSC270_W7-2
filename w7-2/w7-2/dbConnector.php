@@ -1,10 +1,17 @@
 <?php
 
 // Create constants
+<<<<<<< Updated upstream
 DEFINE ('DB_USER', '');
 DEFINE ('DB_PSWD', '');
 DEFINE ('DB_SERVER', '');
 DEFINE ('DB_NAME', '');
+=======
+DEFINE ('DB_USER', 'root');
+DEFINE ('DB_PSWD', 'Nu200240853');
+DEFINE ('DB_SERVER', 'localhost');
+DEFINE ('DB_NAME', 'final');
+>>>>>>> Stashed changes
 
 // ///////////////////////////////////////////////////
 // Get db connection
