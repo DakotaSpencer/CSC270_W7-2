@@ -28,7 +28,7 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
     // ---------------------------------
             // Call the microservice and get the data
     function loadJson(id) {
-        // alert("id: " + id); // Use for debugging
+        alert("id: " + id); // Use for debugging
         request.open('GET', 'apiGetProductQuery.php?productId=' + id);
         request.onload=loadComplete;
         request.send();
@@ -42,11 +42,11 @@ echo '<p type="text" id="productId" style="visibility:hidden;">'.$id.'</p>'
 
         myResponse = request.responseText;
         console.log(request);
-        //alert("A: " + myResponse); // Use for debugging
-        //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
+        alert("A: " + myResponse); // Use for debugging
+        document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
         myData = JSON.parse(myResponse);
 
-        // alert(myData);
+         alert(myData);
         console.log("My Data:", myData);
         console.log(myData[0])
         // Loop through each json record and create the HTML
