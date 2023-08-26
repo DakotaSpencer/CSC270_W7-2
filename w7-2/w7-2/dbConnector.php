@@ -2,11 +2,7 @@
 
 // Create constants
 DEFINE ('DB_USER', 'root');
-<<<<<<< Updated upstream
-DEFINE ('DB_PSWD', 'P@ssw0rd');
-=======
 DEFINE ('DB_PSWD', 'Nu200240853');
->>>>>>> Stashed changes
 DEFINE ('DB_SERVER', 'localhost');
 DEFINE ('DB_NAME', 'final');
 

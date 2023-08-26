@@ -8,19 +8,11 @@ include_once "Header.php";
 
 // Get given page
 $myDbConn =  ConnGet();
-//$PageData = PageContentGet($myDbConn, $PageId);
-<<<<<<< Updated upstream
-// Display page data
-=======
-//// Display page data
->>>>>>> Stashed changes
-//PageDisplay($PageData);
-//mysqli_free_result($PageData);
 
 
 
 ?>
-
+<p id="jsonData"></p>
 
 <script>
             var request = new XMLHttpRequest();
