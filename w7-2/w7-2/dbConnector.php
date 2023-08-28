@@ -2,9 +2,9 @@
 
 // Create constants
 DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PSWD', 'Riley2802*'); //P@ssw0rd
+DEFINE ('DB_PSWD', 'P@ssw0rd'); //P@ssw0rd
 DEFINE ('DB_SERVER', 'localhost');
-DEFINE ('DB_NAME', 'sliceofpi2');
+DEFINE ('DB_NAME', 'final');
 
 // ///////////////////////////////////////////////////
 // Get db connection
