@@ -40,13 +40,12 @@ echo '<p type="text" id="productId" style="visibility:hidden;">' . $id . '</p>';
     function myClickEvent() {
          // alert("my click"); // Use for debugging
         // alert("data: " + document.getElementById("dogId").value); // Use for debugging
-            alert(document.getElementById("productId").innerHTML)
-        addToCart(document.getElementById("productId").value);
+        addToCart(document.getElementById("productId").innerHTML);
     }
     // ---------------------------------
 
     function addToCart(id) {
-        alert("id: " + id); // Use for debugging
+        // Use for debugging
 
         request.open('POST', 'apiAddQuery.php?productId=' + id);
         request.onload=loadComplete;

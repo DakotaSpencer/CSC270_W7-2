@@ -13,7 +13,7 @@ $myProductId = "";
 
 // Get the db connection
 // Get the data
-if (array_key_exists("releaseyear", $_GET) == TRUE) {
+if (array_key_exists("productId", $_GET) == TRUE) {
     // Get the db connection
     // Get the data
     $myDbConn = ConnGet();
