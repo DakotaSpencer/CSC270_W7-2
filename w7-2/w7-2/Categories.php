@@ -35,7 +35,7 @@ echo '<p type="text" id="category" style="visibility:hidden;">'.$category.'</p>'
 ?>
 Search for products by category!
 <input type="text" id="searchVal" value="" placeholder="Category" />
-<button name="a" onclick="search()">Submit</button>
+<button name="a" onclick="search()" class="navBar">Submit</button>
 <script>
         var request = new XMLHttpRequest();
     function search() {

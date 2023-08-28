@@ -1,7 +1,6 @@
 <?php
 session_start();
-include_once "MyHeader.php";
-require "dbConnector.php";
+include_once "Header.php";
 
 // Check if the user is logged in and is an admin
 if (!isset($_SESSION["admin_id"]) || $_SESSION["is_admin"] !== 1) {
@@ -38,10 +37,14 @@ if (isset($errorMessage)) {
 <form method="post" action="">
     <label>User ID to Delete:</label>
     <input type="text" name="userdel" />
-    <input type="submit" value="Delete User" />
+    <input type="submit" value="Delete User" class="navBar"/>
 </form>
 
 <!-- Button to go to the menu page -->
 <form method="get" action="menu.php">
-    <input type="submit" value="Go to Menu" />
+    <input type="submit" value="Go to Menu" class="navBar"/>
 </form>
+
+<?php
+include_once "Footer.php";
+?>

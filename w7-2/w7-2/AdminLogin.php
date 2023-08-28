@@ -1,6 +1,7 @@
 <?php
 session_start();
-include_once "MyHeader.php";
+//include_once "Header.php";
+
 require "dbConnector.php";
 
 //form post
@@ -38,27 +39,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $connection->close();
 }
 ?>
-
-
-
-<h3>Admin Login</h3>
-
+<link rel="stylesheet" type="text/css" href="/Style.css" />
+<table>
+    <tr>
+        <td>
+            <img class="logo" src="Logo.png" />
+        </td>
+        <td>
+            <h3>Admin Login</h3>
+        </td>
+    </tr>
+    
+</table>
 <form method="post" action="">
     <label>Username:</label><br />
     <input name="username" type="text" value="" /><br />
     <label>Password:</label><br />
     <input name="password" type="text" value="" /><br />
-    <input type="submit" />
+    <input class="navBar" type="submit" />
 </form>
 
 <p>
-    <a href="Login.php">Not an Admin? Click Here</a>
+    <button class="navBar">
+        <div>
+            <a href="Login.php" class="navButton">Not Admin? Click Here</a>
+        </div>
+    </button>
+
 </p>
 
-
-
-
 <?php
-include_once "MyHeader.php";
-?>
+include_once "Footer.php";
 
+?>

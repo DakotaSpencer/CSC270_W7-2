@@ -48,15 +48,15 @@ $myDbConn =  ConnGet();
         console.log("My Data:", myData);
         console.log(myData[0])
         // Loop through each json record and create the HTML
-            myReturn += '<div class="imgContainer"><div class="img"><img src="' + myData[0].image.toString() + '" /></div></div><div class="productContainer"><div class="productRating">' +
-                myData[0].rating + " stars | " +
-                myData[0].rateCount + " Ratings</div><div class='productTitle'>" +
-                myData[0].title + "</div><div class='productCategory'> Category: " +
-                myData[0].category + "</div><div class='productDescription'> Description: " +
-                myData[0].description + "</div><div class='productPrice'>$" +
-                myData[0].price + "</div>";
+                myReturn += '<table class="Container"> <tr><td><div><img src="' + myData[0].image.toString() + '" class="imgPic"/></div></td> <td><table class="productContainer"> <tr><td><div class="productTitle">' +
+                myData[0].title + " </div></td></tr> <tr><td><div> <br/>" +
+                myData[0].rating + "  Stars | " +
+                myData[0].rateCount + " Ratings</div></td></tr> <tr><td><div>Category: " +
+                myData[0].category + "</div></td></tr> <tr><td><div> <br/>Description: " +
+                myData[0].description + "</div></td></tr><tr><td><div> <br/>Price: $" +
+                myData[0].price + ".00</div></td></tr> </table> </td>";
 
-        myReturn += "</div>";
+        myReturn += " </tr> </table>";
         document.getElementById("jsonData").innerHTML = myReturn; // Display table
     }
 
@@ -68,6 +68,6 @@ if ($myDbConn) {
     mysqli_close($myDbConn);
 }
 
-include_once "MyFooter.php";
+include_once "Footer.php";
 ?>
 

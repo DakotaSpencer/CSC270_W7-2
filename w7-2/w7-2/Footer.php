@@ -2,5 +2,5 @@
 </html>
 
 <?php
-echo "Copyright &copy; 2023 IBay Inc."
+echo "<div class='CopyRightTag'>Copyright &copy; 2023 IBay Inc.<div>"
 ?>

@@ -9,18 +9,57 @@
         </div>  
         </td>
         <td>
+            <div>
+                <button class="navBar">
+                <div>
+                    <a href="index.php" class="navButton">
+                        Home
+                    </a>
+                </div>
+                </button>
+            </div>
+        </td>
+        <td>
         <div>
             <button class="navBar">
                 <div>
-                    <a href="Product.php?productId=1">
+                    <a href="Product.php?productId=2" class="navButton">
                         Product
                     </a>
                 </div>
-                </button></div>
+            </button></div>
         </td>
         <td>
             <div>
-            <button class="navBar">Nav Button2</button>
+                <button class="navBar">
+                    <div>
+                        <a href="Categories.php" class="navButton">
+                            Categories
+                        </a>
+                    </div>
+                </button>
+            </div>
+        </td>
+        <td>
+            <div>
+                <button class="navBar">
+                    <div>
+                        <a href="Cart.php" class="navButton">
+                            Cart
+                        </a>
+                    </div>
+                </button>
+            </div>
+        </td>
+        <td>
+            <div>
+                <button class="navBar">
+                    <div>
+                        <a href="AdminLogin.php" class="navButton">
+                            Log in
+                        </a>
+                    </div>
+                </button>
             </div>
         </td>
     </tr> 
@@ -43,5 +82,4 @@ session_start();
 
 ?>
 <?php
-echo "This is Menu end";
 ?>
