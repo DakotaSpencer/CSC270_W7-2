@@ -1,15 +1,48 @@
-﻿body
-{
-
-}
-img {
-    
+﻿body {
 }
 
-.logo{
+.logo {
     height: 50px;
     width: 60px;
 }
-.navBar{
-    height:40px;
+
+.navBar {
+    height: 40px;
+    background-color: #ebc3c3;
+    border-radius: 10px;
+}
+
+    .navBar:hover {
+        height: 40px;
+        background-color: #bd9b9b;
+        border-radius: 10px;
+        color: #fffcfc;
+    }
+
+.navButton {
+    color: black;
+    text-decoration: none;
+}
+
+    .navButton:hover {
+        color: black;
+        text-decoration: none;
+        color: #fffcfc;
+    }
+
+
+.imgPic {
+    height: 200px;
+    width: 150px;
+}
+
+.Container {
+    border-style: solid;
+    border-color: #a8a5a5;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+.productContainer {
+    width: 300px;
 }

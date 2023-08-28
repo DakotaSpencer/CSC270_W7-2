@@ -56,7 +56,7 @@ echo '<p type="text" id="productId" style="visibility:hidden;">' . $id . '</p>';
     function loadComplete(evt) {
         var myResponse;
         var myData;
-        var myReturn = "<div>";
+        var myReturn = "<div class='Container'>";
 
         myResponse = request.responseText;
         console.log(request);
@@ -68,7 +68,7 @@ echo '<p type="text" id="productId" style="visibility:hidden;">' . $id . '</p>';
         console.log("My Data:", myData);
         console.log(myData[0])
         // Loop through each json record and create the HTML
-            myReturn += '<div class="imgContainer"><div class="img"><img src="' + myData[0].image.toString() + '" /></div></div><div class="productContainer"><div class="productRating">' +
+            myReturn += '<div class="imgContainer"><div class="img"><img src="' + myData[0].image.toString() + '" class="imgPic"/></div></div><div class="productContainer"><div class="productRating">' +
                 myData[0].rating + " stars | " +
                 myData[0].rateCount + " Ratings</div><div class='productTitle'>" +
                 myData[0].title + "</div><div class='productCategory'> Category: " +
