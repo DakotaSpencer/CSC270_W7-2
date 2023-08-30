@@ -9,11 +9,11 @@ if (!isset($_SESSION["admin_id"]) || $_SESSION["is_admin"] !== 1) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $userIdToDelete = $_POST["user_id_to_delete"];
+    $userIdToDelete = $_POST["userdel"];
 
     // Delete user with the given userID
     $connection = ConnGet();
-    $sql = "DELETE FROM Users WHERE UserId = '$userIdToDelete'";
+    $sql = "DELETE FROM users WHERE UserId = '$userIdToDelete';";
     if (mysqli_query($connection, $sql)) {
         $successMessage = "User deleted successfully.";
     } else {
