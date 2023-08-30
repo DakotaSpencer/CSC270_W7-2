@@ -27,8 +27,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $connection->close();
 }
 ?>
+<link rel="stylesheet" type="text/css" href="/Style.css" />
+<table>
+    <tr>
+        <td>
+            <img class="logo" src="Logo.png" />
+        </td>
+        <td>
+            <h3>Sign Up</h3>
+        </td>
+    </tr>
 
-<h3>Signup</h3>
+</table>
+
 
 <form method="post" action="">
     <label>First Name:</label>
@@ -46,13 +57,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <label>Password:</label>
     <br />
     <input name="password" type="text" value="" />
-    <br />
-    <input type="submit" value="Sign Up" />
+    <br />  
+    <input  class="navBar" type="submit" value="Sign Up" />
+    
 </form>
 
 <p>
-    <a href="Login.php">Already registered? Click Here</a>
+    <button class="navBar">
+        <div>
+            <a href="Login.php" class="navButton">Already registered? Click Here</a>
+        </div>
+    </button>
 </p>
+
+
+
 
 <br />
 <br />
